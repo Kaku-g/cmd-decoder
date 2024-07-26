@@ -1,0 +1,1 @@
+{"create a new directory amp": "mkdir amp \n", "create a new file touch.js": "touch touch.js \n", "git change branch name from master to main": "git branch -m master main \n", "change branch name to main": "git branch -m main \n"}

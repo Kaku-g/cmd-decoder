@@ -29,7 +29,8 @@ def decode_command(text):
     else:
          print_in_color("Executing using gemini model",colors["magenta"])
          response = model.generate_content(f"Convert this natural language instruction to a gitbash terminal: {text}.Give only the command wihtout using any prefix or suffix  in one line without any explanation")
-         cleanResponse=response.text.strip('``')
+         cleanResponse=response.text.strip('`')
+         cleanResponse=cleanResponse.replace('`','')
          command_cache[text]=cleanResponse
          save_cache(command_cache)
          history(cleanResponse)
